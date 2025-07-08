@@ -54,7 +54,7 @@ const TextImprover = () => {
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          'Authorization': 'Bearer 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',
+          'Authorization': `Bearer ${import.meta.env.VITE_LOCAL_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
